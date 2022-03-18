@@ -26,6 +26,14 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  //var conver = s.split ('');
+  //let mayuscula =[];
+  //let minuscula =[];
+
+  //for (i=0; i<conver.length[i]; i++){
+
+  //}
+
 }
 
 
@@ -57,7 +65,21 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+
+  var cambio = true;
+  while (cambio){
+    cambio = false;
+    for (var i=0; i<arr.length-1; i++){
+      var aux = arr[i];
+      arr[i] = arr[i+1];
+      arr[i+1] = aux;
+
+      cambio = true;
+    }
+  }
+  return arr;
 }
+
 
 
 function buscoInterseccion(arreglo1, arreglo2){
@@ -65,7 +87,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+
+  var elementos = [];
+
+  for (i=0; i<arreglo1.length; i++){
+    for (j=0; j<arreglo2.length; i++){
+      if (arreglo1[i] === arreglo2[j]){
+        elementos.push(arreglo1[i]);
+      }
+    }
+  }
+  return elementos;
 }
 
 
